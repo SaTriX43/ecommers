@@ -1,0 +1,40 @@
+.productos-destacados__seccion{
+  display: flex;
+  width: 80vw;
+  max-width: 1000px;
+  height: 200px;
+
+  margin: auto;
+  margin-top: 20px;
+
+  background-color: rgb(43, 108, 144);
+}
+
+
+.productos-destacados__contenedor-botones {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 200px;
+
+  z-index: 10;
+  gap: 15px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.productos-destacados-boton {
+  width: 10px;
+  height: 10px;
+
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+.productos-destacados-boton:hover {
+  background-color: rgb(196, 196, 196);
+  cursor: pointer;
+}
