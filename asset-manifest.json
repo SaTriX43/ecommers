@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ecommers/static/css/main.14d07c5c.css",
+    "main.js": "/ecommers/static/js/main.9c09c8ea.js",
+    "static/media/copas.jpg": "/ecommers/static/media/copas.e0c7116e34f1972255fd.jpg",
+    "index.html": "/ecommers/index.html",
+    "main.14d07c5c.css.map": "/ecommers/static/css/main.14d07c5c.css.map",
+    "main.9c09c8ea.js.map": "/ecommers/static/js/main.9c09c8ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14d07c5c.css",
+    "static/js/main.9c09c8ea.js"
+  ]
+}
