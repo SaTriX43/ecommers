@@ -1,10 +1,16 @@
 import React from "react";
 import '../estilos/Encabezado.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBox, faCar, faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBox, faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
-function Encabezado() {
+function Encabezado({valorBusqueda , setValorBusqueda}) {
+
+  function actualizarValorBusqueda(e) {
+    setValorBusqueda(e.target.value)
+    console.log(valorBusqueda)
+  }
+
   return(
     <header className="encabezado">
       <h1 className="encabezado__titulo">SaTriX e commers</h1>
@@ -20,6 +26,8 @@ function Encabezado() {
           type="text"
           placeholder="Buscar"
           className="input encabezado__input"
+          value={valorBusqueda}
+          onChange={actualizarValorBusqueda}
         />
       </div>
       <div className="encabezado__apartados">

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import '../estilos/Categorias.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 
-function Categorias() {
+function Categorias({setCategoriasSeleccionada}) {
+
+
+  function detectarCategoria(e) {
+    const categoria = e.target.getAttribute('data-category')
+    setCategoriasSeleccionada(categoria)
+  }
+
   return(
     <section className="categorias__seccion">
       <h2 className="categorias-titulo">Categorias</h2>
@@ -24,11 +31,11 @@ function Categorias() {
       <div className="categorias-separador"></div>
 
       <div className="categorias__contenedor-botones">
-        <button className="categorias-botones sombreado categorias-boton-marcado">ALL</button>
-        <button className="categorias-botones sombreado">Electronica</button>
-        <button className="categorias-botones sombreado">Joyas</button>
-        <button className="categorias-botones sombreado">Ropa  hombres</button>
-        <button className="categorias-botones sombreado">Ropa mujeres</button>
+        <button className="categorias-botones sombreado categorias-boton-marcado" data-category="all" onClick={detectarCategoria}>todo</button>
+        <button className="categorias-botones sombreado" data-category="electronics"  onClick={detectarCategoria}>Electronica</button>
+        <button className="categorias-botones sombreado" data-category="jewelery"  onClick={detectarCategoria}>Joyas</button>
+        <button className="categorias-botones sombreado" data-category="men's clothing"  onClick={detectarCategoria}>Ropa hombre</button>
+        <button className="categorias-botones sombreado" data-category="women's clothing"  onClick={detectarCategoria}>Ropa mujer</button>
       </div>
     </section>
   )

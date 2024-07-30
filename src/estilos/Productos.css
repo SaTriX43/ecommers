@@ -1,9 +1,10 @@
 .productos__contenedor-producto {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 300px;
-  max-height: 300px ;
+  min-height: 350px;
+  max-height: 350px ;
 
   background-color: white;
   border-radius: 20px;
@@ -36,10 +37,22 @@
   background-color: rgb(13, 13, 44);
 }
 
+.productos__contenedor-producto-titulo {
+  display: flex;
+  width: 100%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+  font-size: 18px;
+}
+
 .productos__contenedor-boton {
+  position: absolute;
   display: flex;
   width: 100px;
   height: 30px ;
+
+  bottom: 10px;
 
   background-color: rgb(14, 14, 146);
   border: none;
